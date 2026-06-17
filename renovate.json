@@ -5,9 +5,11 @@
   ],
   "packageRules": [
     {
-      "matchPackagePatterns": ["^@types/"],
       "groupName": "@types packages",
-      "automerge": true
+      "automerge": true,
+      "matchPackageNames": [
+        "/^@types//"
+      ]
     },
     {
       "matchDepTypes": ["dependencies"],
