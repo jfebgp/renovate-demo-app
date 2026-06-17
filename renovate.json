@@ -6,7 +6,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^tool-versions\\.txt$"],
+      "managerFilePatterns": [
+        "/^tool-versions\\.txt$/"
+      ],
       "matchStrings": ["^helm=(?<currentValue>[^\\s]+)$"],
       "depNameTemplate": "helm",
       "packageNameTemplate": "helm/helm",
@@ -15,7 +17,9 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["^tool-versions\\.txt$"],
+      "managerFilePatterns": [
+        "/^tool-versions\\.txt$/"
+      ],
       "matchStrings": ["^node=(?<currentValue>[^\\s]+)$"],
       "depNameTemplate": "nodejs/node",
       "datasourceTemplate": "github-releases",
@@ -23,7 +27,9 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["^deployment/deployment\\.yaml$"],
+      "managerFilePatterns": [
+        "/^deployment/deployment\\.yaml$/"
+      ],
       "matchStrings": ["image:\\s+(?<depName>[^\\s:]+):(?<currentValue>[^\\s]+)"],
       "datasourceTemplate": "docker"
     }
