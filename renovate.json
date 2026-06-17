@@ -9,7 +9,7 @@
       "managerFilePatterns": [
         "/^tool-versions\\.txt$/"
       ],
-      "matchStrings": ["^helm=(?<currentValue>[^\\s]+)$"],
+      "matchStrings": ["helm=(?<currentValue>[^\\s]+)"],
       "depNameTemplate": "helm",
       "packageNameTemplate": "helm/helm",
       "datasourceTemplate": "github-tags",
@@ -20,7 +20,7 @@
       "managerFilePatterns": [
         "/^tool-versions\\.txt$/"
       ],
-      "matchStrings": ["^node=(?<currentValue>[^\\s]+)$"],
+      "matchStrings": ["node=(?<currentValue>[^\\s]+)"],
       "depNameTemplate": "nodejs/node",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "node"
