@@ -3,6 +3,15 @@
   "extends": [
     "config:recommended"
   ],
+  "configMigration": true,
+  "automergeType": "pr",
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"],
+    "automerge": true
+  },
+  "osvVulnerabilityAlerts": true,
+  "minimumReleaseAge": "3 days",
   "customManagers": [
     {
       "customType": "regex",
@@ -38,25 +47,27 @@
     {
       "groupName": "@types packages",
       "automerge": true,
-      "matchPackageNames": [
-        "/^@types//"
-      ]
-    },
-    {
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "prPriority": 5
+      "matchPackagePatterns": ["^@types/"]
     },
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch"],
-      "automerge": true,
-      "prPriority": -1
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "prPriority": 3
     },
     {
       "matchPackageNames": ["helm", "helm/helm"],
       "versioning": "semver"
+    },
+    {
+      "matchCategories": ["security"],
+      "automerge": true,
+      "automergeType": "pr",
+      "prPriority": 10
     }
   ]
 }
