@@ -47,7 +47,9 @@
     {
       "groupName": "@types packages",
       "automerge": true,
-      "matchPackagePatterns": ["^@types/"]
+      "matchPackageNames": [
+        "/^@types//"
+      ]
     },
     {
       "matchDepTypes": ["devDependencies"],
