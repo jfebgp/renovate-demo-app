@@ -5,9 +5,25 @@
   ],
   "packageRules": [
     {
+      "matchPackagePatterns": ["^@types/"],
+      "groupName": "@types packages",
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "prPriority": 5
+    },
+    {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch"],
-      "automerge": true
+      "automerge": true,
+      "prPriority": -1
+    },
+    {
+      "matchPackageNames": ["helm"],
+      "versioning": "semver"
     }
   ]
 }
