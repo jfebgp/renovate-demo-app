@@ -15,6 +15,6 @@
     "@types/express": "5.0.6",
     "@types/node": "24.13.2",
     "eslint": "7.31.0",
-    "jest": "27.5.1"
+    "jest": "30.4.2"
   }
 }
